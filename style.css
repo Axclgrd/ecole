@@ -1,7 +1,8 @@
 :root{
-   --couleur-fond: #262626;
+   --couleur-fond: #fdfdf2;
    --couleur-principal: #3F837A;
    --couleur-secondaire: #735;
+   --couleur-texte: #000;
    --police: 'Poppins', sans-serif;
 }
 
@@ -101,7 +102,7 @@ nav{
 .hamburger div{
     width: 30px;
     height: 3px;
-    background: #f2f5f7;
+    background: #000;
     margin: 5px;
     transition: all 0.3s ease;
 }
@@ -111,15 +112,27 @@ nav{
 }
 
 header div,h1{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    color: var(--couleur-texte);
     position: relative;
 }
 
 header div video{
     width: 100%;
     max-height: 80%;
-    position:absolute;
-
 }
+
+header div img{
+    width: 100%;
+    max-height: 80%;
+}
+
+h1:first-child + header > div > img {
+    position: relative;
+    top: -18px;
+}
+
 header .waves {
     position:relative;
     width: 100%;
@@ -137,7 +150,9 @@ header .waves {
     text-align:center;
     background-color: var(--couleur-fond);
   }
-  
+  p{
+    font-family: var(--police);
+  }
   /* Animation */
   
   .parallax > use {
