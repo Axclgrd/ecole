@@ -4,6 +4,7 @@
    --couleur-secondaire: #735;
    --couleur-texte: #000;
    --police: 'Poppins', sans-serif;
+   --police-logo:'Space Mono', monospace;
 }
 
 body{
@@ -119,7 +120,7 @@ header{
   height: 250px;
   width: 100%;
   overflow: hidden;
-  background: var(--couleur-fond) url('https://www.montpellier.fr/uploads/Image/2a/15926_914_universite.jpg') no-repeat center center;
+  background: url('https://www.montpellier.fr/uploads/Image/2a/15926_914_universite.jpg') no-repeat center center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
