@@ -43,7 +43,26 @@
         <!-- Modal content -->
         <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
+        <p>Merci d'entrer vos information afin de vous inscrire. Nous vous contacterons par la suite</p>
+        <form>
+            <label for="prenom">Prénom*:</label><br>
+            <input type="text" id="fname" name="prenom" required><br>
+            <label for="nom">Nom*:</label><br>
+            <input type="text" id="lname" name="nom" required><br>
+            <label for="sexe">Sexe*:</label><br>
+            <input type="radio" id="homme" name="sexe" value="Homme">
+            <label for="homme">Homme</label><br>
+            <input type="radio" id="femme" name="sexe" value="Femme">
+            <label for="femme">Femme</label><br>
+            <input type="radio" id="autre" name="sexe" value="Autre">
+            <label for="autre">Autre</label><br>
+            <label for="diplome">Dernier diplome*:</label><br>
+            <input type="text" id="diplome" name="diplome" required><br>
+            <label for="naissance">Date de naissance*:</label>
+            <input type="date" id="naissance" name="naissance" required><br>
+            <label for="email">Email*:</label><br>
+            <input type="email" id="email" size="30" required></form>
+            <p>*Champs a caractère obligatoire</p>
         </div>
     
     </div>
@@ -66,8 +85,7 @@
     window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
-    }
-    }
+    }}
     </script>
 
         <!-- En tete du site -->

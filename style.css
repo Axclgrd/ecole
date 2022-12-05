@@ -119,15 +119,23 @@ nav{
   
   /* Modal Content */
   .modal-content {
-    background-color: #fefefe;
+    background: rgba(255, 255, 255, 0.51);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border: 1px solid rgba(255, 255, 255, 0.53);
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+    width: 50%;
   }
 
   .modal-content > p{
-    font-style: var(--police);
+    font-family: var(--police);
+  }
+
+  .modal-content > form{
+    font-family: var(--police);
   }
   
   /* The Close Button */
