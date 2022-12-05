@@ -153,6 +153,10 @@ nav{
     cursor: pointer;
   }
 
+.modal-content > input{
+    border-radius: 10px;
+}
+
 /*Navigation Icon Styling*/
 
 .hamburger div{

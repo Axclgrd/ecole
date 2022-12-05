@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@30,300,0,0" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="carrous.scss">
     <link rel="icon" type="image/x-icon" href="img/image-removebg-preview.ico">
     <title>AELA School</title>
 </head>
@@ -46,9 +45,9 @@
         <p>Merci d'entrer vos information afin de vous inscrire. Nous vous contacterons par la suite</p>
         <form>
             <label for="prenom">Prénom*:</label><br>
-            <input type="text" id="fname" name="prenom" required><br>
+            <input type="text" id="fname" name="prenom" placeholder="Prénom"><br>
             <label for="nom">Nom*:</label><br>
-            <input type="text" id="lname" name="nom" required><br>
+            <input type="text" id="lname" name="nom" placeholder="Nom"><br>
             <label for="sexe">Sexe*:</label><br>
             <input type="radio" id="homme" name="sexe" value="Homme">
             <label for="homme">Homme</label><br>
@@ -57,12 +56,14 @@
             <input type="radio" id="autre" name="sexe" value="Autre">
             <label for="autre">Autre</label><br>
             <label for="diplome">Dernier diplome*:</label><br>
-            <input type="text" id="diplome" name="diplome" required><br>
+            <input type="text" id="diplome" name="diplome" placeholder="Dernier diplome"><br>
             <label for="naissance">Date de naissance*:</label>
             <input type="date" id="naissance" name="naissance" required><br>
             <label for="email">Email*:</label><br>
-            <input type="email" id="email" size="30" required></form>
+            <input type="email" id="email" size="30" placeholder="email@nomdomaine.com"></form>
             <p>*Champs a caractère obligatoire</p>
+            <button class="login-button" type="submit">Envoyer le formulaire</button>
+
         </div>
     
     </div>
