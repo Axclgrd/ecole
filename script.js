@@ -26,7 +26,7 @@ hamburger.addEventListener('click', ()=>{
         mm = String(today.getMonth() + 1).padStart(2, "0"),
         yyyy = today.getFullYear(),
         nextYear = yyyy + 1,
-        dayMonth = "01/01/",
+        dayMonth = "02/01/",
         birthday = dayMonth + yyyy;
     
     today = mm + "/" + dd + "/" + yyyy;
@@ -56,3 +56,19 @@ hamburger.addEventListener('click', ()=>{
           //seconds
         }, 0)
     }());
+    function scrollFunction1() {
+      let e = document.getElementById("parti1");
+      e.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+        inline: 'start'
+      });
+    }
+    function scrollFunction2() {
+      let e = document.getElementById("parti2");
+      e.scrollIntoView({
+        block: 'end',
+        behavior: 'smooth',
+        inline: 'center'
+      });
+    }

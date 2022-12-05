@@ -22,10 +22,10 @@
                 <div class="bars3"></div>
             </div>
             <ul class="nav-links">
-                <li><a onclick="scrollFunction1()">Acceuil <span class="material-symbols-outlined">
+                <li><a href="#">Acceuil <span class="material-symbols-outlined">
                     home
                     </span></a></li>
-                <li><a onclick="scrollFunction2()">Formation<span class="material-symbols-outlined">
+                <li><a href="#">Formation<span class="material-symbols-outlined">
                     history_edu
                     </span></a></li>
                 <li><a href="#">Info<span class="material-symbols-outlined">
@@ -45,7 +45,7 @@
         <!-- Modal content -->
         <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Merci d'entrer vos information afin de vous inscrire.<br> Nous vous contacterons par la suite.</p>
+        <p>Merci d'entrer vos information afin de vous inscrire. Nous vous contacterons par la suite</p>
         <form method="post" action="inscription.php">
             <label for="prenom">Prénom*:</label><br>
             <input type="text" id="fname" name="prenom" placeholder="Prénom"><br>
@@ -56,19 +56,20 @@
             <label for="homme">Homme</label><br>
             <input type="radio" id="femme" name="sexe" value="Femme">
             <label for="femme">Femme</label><br>
+            <input type="radio" id="autre" name="sexe" value="Autre">
+            <label for="autre">Autre</label><br>
             <label for="diplome">Dernier diplome*:</label><br>
             <input type="text" id="diplome" name="diplome" placeholder="Dernier diplome"><br>
             <label for="naissance">Date de naissance*:</label>
             <input type="date" id="naissance" name="naissance" required><br>
             <label for="email">Email*:</label><br>
             <input type="email" id="email" size="30" placeholder="email@nomdomaine.com"></form>
-            <p>*Champs a caractère obligatoire</p>
+            <p>*Champs à caractère obligatoire</p>
             <button class="login-button" type="submit">Envoyer le formulaire</button>
 
         </div>
     
     </div>
-    
     <script>
         // Get the modal
     var modal = document.getElementById("myModal");
@@ -92,17 +93,16 @@
     </script>
 
         <!-- En tete du site -->
-        <header id="parti1">
+        <header>
             <div>
                 <h1 class="titr-bvn">BIENVENUE <br> AELA School</h1>
             </div>
         </header>
         <!-- Contenu du site -->
         <main>
-            <p>Une école prestigieuse qui vous accompagne de votre vie de jeune à votre vie active.</p>
-            <p><iframe width="560" height="315" src="https://www.youtube.com/embed/1W18Yg3x2Lo" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media"></iframe></p>
+            <p>Une école prestigieuse qui vous accompagne de votre vie de jeune à la vie active.</p>
             <div class="container">
-                <h1 id="headline">Prochaine rentrée scolaire</h1>
+                <h1 id="headline">Prochaine rentré scolaire</h1>
                 <div id="countdown">
                 <ul>
                     <li><span id="days"></span>days</li>
@@ -112,53 +112,89 @@
                 </ul>
                 </div>
             </div>
-            <!-- Fiches formations --> 
-            <h1>Nos formation</h1>
-    <div class="carte">
-        <div class="table">
-            <section>
-                <div class="Card-Actor">
-                    <div class="content-Actor">
-                    <div class="img-Actor">
-                        <img id="Elliot" src="https://www.formation-professionnelle.pro/wp-content/uploads/2021/04/formation-en-informatique.jpg">
-                    </div>
-                    <div class="content-card-Actor">
-                        <h3>Développeur <br><span> BTS ➡️ Master</span></h3>
-                    </div>
-                    <div class="text-content" id="parti2">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, corrupti unde. Praesentium porro et numquam a doloremque expedita, magnam accusamus.</p>
-                    </div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="Card-Actor">
-                    <div class="content-Actor">
-                    <div class="img-Actor">
-                        <img id="Elliot" src="https://cap.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Fcap.2F2022.2F01.2F07.2F7c6b7164-88d5-499b-8b1b-04e6500a0d39.2Ejpeg/1200x630/background-color/ffffff/quality/70/la-lourde-facture-environnementale-des-data-centers-1424800.jpg">
-                    </div>
-                    <div class="content-card-Actor">
-                        <h3>Ingénieur Réseau<br><span> BTS ➡️ Master</span></h3>
-                    </div>
-                    <div class="text-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, corrupti unde. Praesentium porro et numquam a doloremque expedita, magnam accusamus.</p>
-                    </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-            <!-- <div class="card">
-                <img class="card-img-top" src="img/uni.jpeg" alt="Card image cap">
-                <div class="card-body">
-                <h1>Formation développement</h1>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-              </div> -->
         </main>
     </body>
-    <footer>
-    <p>Axel GUILLOUARD, Elliot FIORESE<br>Tout drois reserver©</p>
-    </footer>
 </html>
+<?php
+//index.php
+
+$error = '';
+$name = '';
+$email = '';
+$subject = '';
+$message = '';
+
+function clean_text($string)
+{
+ $string = trim($string);
+ $string = stripslashes($string);
+ $string = htmlspecialchars($string);
+ return $string;
+}
+
+if(isset($_POST["submit"]))
+{
+ if(empty($_POST["name"]))
+ {
+  $error .= '<p><label class="text-danger">Please Enter your Name</label></p>';
+ }
+ else
+ {
+  $name = clean_text($_POST["name"]);
+  if(!preg_match("/^[a-zA-Z ]*$/",$name))
+  {
+   $error .= '<p><label class="text-danger">Only letters and white space allowed</label></p>';
+  }
+ }
+ if(empty($_POST["email"]))
+ {
+  $error .= '<p><label class="text-danger">Please Enter your Email</label></p>';
+ }
+ else
+ {
+  $email = clean_text($_POST["email"]);
+  if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+  {
+   $error .= '<p><label class="text-danger">Invalid email format</label></p>';
+  }
+ }
+ if(empty($_POST["subject"]))
+ {
+  $error .= '<p><label class="text-danger">Subject is required</label></p>';
+ }
+ else
+ {
+  $subject = clean_text($_POST["subject"]);
+ }
+ if(empty($_POST["message"]))
+ {
+  $error .= '<p><label class="text-danger">Message is required</label></p>';
+ }
+ else
+ {
+  $message = clean_text($_POST["message"]);
+ }
+
+ if($error == '')
+ {
+  $file_open = fopen("contact_data.csv", "a");
+  $no_rows = count(file("contact_data.csv"));
+  if($no_rows > 1)
+  {
+   $no_rows = ($no_rows - 1) + 1;
+  }
+  $form_data = array(
+   'sr_no'  => $no_rows,
+   'name'  => $name,
+   'email'  => $email,
+   'subject' => $subject,
+   'message' => $message
+  );
+  fputcsv($file_open, $form_data);
+  $error = '<label class="text-success">Thank you for contacting us</label>';
+  $name = '';
+  $email = '';
+  $subject = '';
+  $message = '';
+ }
+};
