@@ -67,7 +67,18 @@ hamburger.addEventListener('click', ()=>{
     function scrollFunction2() {
       let e = document.getElementById("parti2");
       e.scrollIntoView({
-        block: 'end',
+        // block: 'end',
+        // behavior: 'smooth',
+        // inline: 'center'
+        block: 'start',
+        behavior: 'smooth',
+        inline: 'center'
+      });
+    }
+    function scrollFunction3() {
+      let e = document.getElementById("parti3");
+      e.scrollIntoView({
+        block: 'start',
         behavior: 'smooth',
         inline: 'center'
       });
