@@ -25,16 +25,12 @@
                 <li><a onclick="scrollFunction1()">Acceuil <span class="material-symbols-outlined">
                     home
                     </span></a></li>
-                <li><a onclick="scrollFunction2()">Formation<span class="material-symbols-outlined">
+                <li><a onclick="scrollFunction2()">Formations<span class="material-symbols-outlined">
                     history_edu
                     </span></a></li>
-                <li><a onclick="scrollFunction3()">Info<span class="material-symbols-outlined">
+                <li><a onclick="scrollFunction3()">Informations<span class="material-symbols-outlined">
                     info
                     </span></a></li>
-                <li><a href="#">Nous contacter<span class="material-symbols-outlined">
-                    call
-                    </span>
-                    </a></li>
                 <li><button id="myBtn" class="login-button">S'inscrire</button></li>
             </ul>
             <script src="script.js"></script>
@@ -99,7 +95,7 @@
         </header>
         <!-- Contenu du site -->
         <main>
-            <p>Une école prestigieuse qui vous accompagne de votre vie de jeune à votre vie active.</p>
+            <p>AELA School : Faites de votre passion pour l'informatique votre métier.</p>
             <p><iframe width="560" height="315" src="https://www.youtube.com/embed/1W18Yg3x2Lo" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media"></iframe></p>
             <div class="container">
                 <h1 id="headline">Prochaine rentrée scolaire</h1>
@@ -113,8 +109,7 @@
                 </div>
             </div>
             <!-- Fiches formations --> 
-            <hr id="parti2">
-            <h1>Nos formation</h1>
+            <h1 id="parti2">Nos formations</h1>
     <div class="carte">
         <div class="table">
             <section>
@@ -158,15 +153,38 @@
               </div>
               </div> -->
               <div class="info" id="parti3">
-                <h1>Information</h1>
+                <h1>Informations</h1>
                 <div class="table2">
+                    <div class="section2">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2022.7526638371198!2d2.7421414941064626!3d48.42680007575311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5f5b807433595%3A0x80db9c3a9eda7664!2sUTEC%20Avon-Fontainebleau!5e0!3m2!1sfr!2sfr!4v1670331996964!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <p>Adresse <br> Rue de Valvins <br>Numero de contact : <br> 0165656565 <br> </p>
+                    </div class="section2">
+                    <div class="section2">
+                    <p>Ville : Fontainebleau - Avon</br> Code Postale : 77215 </br> Adresse : 1 Rue du Port de Valvins<br>Numéro de contact : 0165656565 <br><br> Dates d'ouverture : </br> Du lundi au jeudi : 8h30/12h30 - 13h30/17h00
+                    </br> Le vendredi : 8h30/12h30 - 13h30/16h00 </p>
+                    </div class="section2">
+                    <div class="section2">
+                        <!-- action="/mon-script-de-traitement-du-formulaire.php"method="post" -->
+                    <form>
+                        <label for="nom">Nom :</label><br>
+                        <input type="text" id="nom" name="nom"><br>
+
+                        <label for="nom">Prénom :</label><br>
+                        <input type="text" id="nom" name="nom"><br>
+                      
+                        <label for="email">Email :</label><br>
+                        <input type="email" id="email" name="email"><br>
+                      
+                        <label for="message">Message :</label><br>
+                        <textarea id="message" name="message" rows="5" cols="30"></textarea><br>
+                      
+                        <input class="login-button" type="submit" value="Envoyer">
+                      </form>
+                    </div class="section2">
                 </div>
               </div>
         </main>
     </body>
     <footer>
-    <p>AELA School<br>Tout drois reserver©</p>
+    <p>AELA School<br>Tout droits réservés©</p>
     </footer>
 </html>

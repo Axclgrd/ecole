@@ -206,6 +206,7 @@ main .container {
   color: var(--couleur-secondaire);
   padding: 0%;
   margin:0%;
+  display: block;
   text-align: center;
 }
 
@@ -217,7 +218,7 @@ main > div > div > ul > li {
   display: inline-block;
   font-size: 1rem;
   list-style-type: none;
-  padding: 1px;
+  padding: 2px;
   text-transform: uppercase;
   font-family: var(--police);
 }
@@ -241,12 +242,12 @@ hr{
 .carte{
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background:linear-gradient(65deg, #0edaa5, #0e16da, #da0e61, #da6f0e);
+  /* background:linear-gradient(65deg, #0edaa5, #0e16da, #da0e61, #da6f0e);
   background-size: 800% 800%;
   -webkit-animation: AnimationName 11s ease infinite;
   -moz-animation: AnimationName 11s ease infinite;
   animation: AnimationName 11s ease infinite;
-  border-radius:10px;
+  border-radius:10px; */
 }
 .table {
   width: 100%;
@@ -381,17 +382,42 @@ footer > p{
   display: flex;
   flex-direction: row;
 }
-
-.table2 > iframe{
+.section2{
   position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0px 0;
+}
+.section2 > iframe{
+  position: relative;
+  margin: 10px;
+  margin-top: 0;
 }
 
-.table2 > p{
-  margin-left: 10px;
+.section2 > p{
+  margin-left: 4rem;
   color: var(--couleur-principal);
   font-family: var(--police);
   position: relative;
+  margin-right: 4rem;
+  font-size: 1.4rem;
 }
+
+.section2 > form{
+  font-family: var(--police);
+  color: var(--couleur-secondaire);
+}
+
+.section2 > form > .login-button{
+  background-color: var(--couleur-secondaire);
+  color: #fff;
+  padding: 7px;
+  margin: 0px;
+}
+
 
   @keyframes move-forever {
     0% {
@@ -535,5 +561,19 @@ footer > p{
             display: flex;
             flex-direction: column;
           }
+
+          .section2 > p {
+            display: inline-block; 
+            text-align: left;
+            padding: 0;
+            margin: 0;
+            margin-left: 5px;
+          }
+
+          .section2 > form{
+              width: 100%;
+              margin-left: 10px;
+          }
+
 }
 
