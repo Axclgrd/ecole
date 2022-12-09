@@ -1,8 +1,11 @@
 version: '3.9'
 services:
   web:
-    container_name: apache2
-    image: ubuntu/apache2:latest
+    container_name: php-apache
+    build:
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql
     ports:
       - "80:80"
     volumes:

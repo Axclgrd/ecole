@@ -7,12 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@30,300,0,0" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="carrous.scss">
     <link rel="icon" type="image/x-icon" href="img/image-removebg-preview.ico">
     <title>AELA School</title>
 </head>
     <body>
-         <!-- menu de navigation -->
+        <!-- menu de navigation -->
         <nav>
             <div class="logo">
                 <img decoding="async" src="img/image-removebg-preview.png" alt="Logo">
@@ -26,37 +25,113 @@
                 <li><a href="index.html">Acceuil <span class="material-symbols-outlined">
                     home
                     </span></a></li>
-                <li><a href="Formation.html">Formation<span class="material-symbols-outlined">
+                <li><a href="formation.html">Formations<span class="material-symbols-outlined">
                     history_edu
                     </span></a></li>
-                <li><a href="info.html">Info<span class="material-symbols-outlined">
+                <li><a href="info.html">Informations<span class="material-symbols-outlined">
                     info
                     </span></a></li>
-                <li><a href="contact.html">Nous contacter</a></li>
-                <li><button class="login-button" href="inscription.php">S'inscrire</button></li>
+                <li><button id="myBtn" class="login-button">S'inscrire</button></li>
             </ul>
             <script src="script.js"></script>
         </nav>
+            <!-- PopUp demande d'inscription -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Merci d'entrer vos information afin de vous inscrire.<br> Nous vous contacterons par la suite.</p>
+        <form method="post" action="inscription.php">
+            <label for="prenom">Prénom*:</label><br>
+            <input type="text" id="fname" name="prenom" placeholder="Prénom"><br>
+            <label for="nom">Nom*:</label><br>
+            <input type="text" id="lname" name="nom" placeholder="Nom"><br>
+            <label for="sexe">Sexe*:</label><br>
+            <input type="radio" id="homme" name="sexe" value="Homme">
+            <label for="homme">Homme</label><br>
+            <input type="radio" id="femme" name="sexe" value="Femme">
+            <label for="femme">Femme</label><br>
+            <label for="diplome">Dernier diplome*:</label><br>
+            <input type="text" id="diplome" name="diplome" placeholder="Dernier diplome"><br>
+            <label for="naissance">Date de naissance*:</label>
+            <input type="date" id="naissance" name="naissance" required><br>
+            <label for="email">Email*:</label><br>
+            <input type="email" id="email" size="30" placeholder="email@nomdomaine.com"></form>
+            <p>*Champs a caractère obligatoire</p>
+            <button class="login-button" type="submit">Envoyer le formulaire</button>
+
+        </div>
+    
+    </div>
+    
+    <script>
+        // Get the modal
+    var modal = document.getElementById("myModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }}
+    </script>
+
         <!-- En tete du site -->
-        <header>
+        <header id="parti1">
             <div>
-                <h1 class="titr-bvn">BIENVENUE <br> AELA School</h1>
+                <h1 class="titr-bvn">nos formations <br> AELA School</h1>
             </div>
         </header>
         <!-- Contenu du site -->
         <main>
-            <p>AELA spécialiser depuis le de 20ans deans le managment international et l'informatique propose dans ce nouvelle établissement de nouvelle formation</p>
-            <div class="container">
-                <h1 id="headline">Prochaine rentré scolaire</h1>
-                <div id="countdown">
-                <ul>
-                    <li><span id="days"></span>days</li>
-                    <li><span id="hours"></span>Hours</li>
-                    <li><span id="minutes"></span>Minutes</li>
-                    <li><span id="seconds"></span>Seconds</li>
-                </ul>
+    <div class="carte">
+        <div class="table">
+            <section>
+                <div class="Card-Actor">
+                    <div class="content-Actor">
+                    <div class="img-Actor">
+                        <img id="Elliot" src="https://www.formation-professionnelle.pro/wp-content/uploads/2021/04/formation-en-informatique.jpg">
+                    </div>
+                    <div class="content-card-Actor">
+                        <h3>Développeur <br><span> BTS ➡️ Master</span></h3>
+                    </div>
+                    <div class="text-content" >
+                        <p>Lorem ipsum  sit amet consectetur adipisicing elit. Qui, corrupti unde. Praesentium porro et numquam a doloremque expedita, magnam accusamus.</p>
+                    </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+            <section>
+                <div class="Card-Actor">
+                    <div class="content-Actor">
+                    <div class="img-Actor">
+                        <img id="Elliot" src="https://cap.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Fcap.2F2022.2F01.2F07.2F7c6b7164-88d5-499b-8b1b-04e6500a0d39.2Ejpeg/1200x630/background-color/ffffff/quality/70/la-lourde-facture-environnementale-des-data-centers-1424800.jpg">
+                    </div>
+                    <div class="content-card-Actor">
+                        <h3>Ingénieur Réseau<br><span> BTS ➡️ Master</span></h3>
+                    </div>
+                    <div class="text-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, corrupti unde. Praesentium porro et numquam a doloremque expedita, magnam accusamus.</p>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>    
         </main>
     </body>
+    <footer>
+    <p>AELA School<br>Tout droits réservés©</p>
+    </footer>
 </html>
