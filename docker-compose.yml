@@ -1,0 +1,26 @@
+version: '3.9'
+services:
+  web:
+    container_name: apache2
+    image: ubuntu/apache2:latest
+    ports:
+      - "80:80"
+    volumes:
+      - "/Users/axelguillouard/projet-ecole/ecole:/var/www/html"
+  mysql:
+    container_name: mysql
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    volumes:
+      - "/Users/axelguillouard/projet-ecole/mysql-db:/var/lib/mysql"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - "3307:80"
+    environment:
+      - PMA_HOST=10.101.0.61
+    
