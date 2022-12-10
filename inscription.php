@@ -1,3 +1,4 @@
+
 <?php
   // Récupération des données du formulaire
   $prenom = $_POST['prenom'];
@@ -8,7 +9,7 @@
   $diplome = $_POST['diplome'];
 
   // Connexion à la base de données
-  $host = "10.101.0.61";
+  $host = "192.168.1.17";
   $username = "root";
   $password = "root";
   $dbname = "insciption";
