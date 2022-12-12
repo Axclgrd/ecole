@@ -1,3 +1,49 @@
+<!-- Modifier la structure pour rediriger vers login pour evitér duplicata -->
+<?php
+  // ob_start();
+  // Récupération des données du formulaire
+  $prenom = $_POST['prenom'];
+  $nom = $_POST['nom'];
+  $sexe = $_POST['sexe'];
+  $naissance = $_POST['naissance'];
+  $email = $_POST['email'];
+  $diplome = $_POST['diplome'];
+
+  // Connexion à la base de données
+  $host = "10.101.0.61";
+  $username = "root";
+  $password = "root";
+  $dbname = "insciption";
+
+  $conn = mysqli_connect($host, $username, $password, $dbname);
+
+  // Vérification de la connexion
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
+
+  // Préparation de la requête SQL d'insertion
+  $sql = "INSERT INTO inscription (prenom, nom, sexe, naissance, email, diplome) VALUES (?,?,?,?,?,?)";
+  $stmt = mysqli_prepare($conn, $sql);
+
+  // Liaison des variables à la requête préparée
+  mysqli_stmt_bind_param($stmt, "ssssss", $prenom, $nom, $sexe, $naissance, $email, $diplome);
+
+  // Exécution de la requête
+  mysqli_stmt_execute($stmt);
+
+  // Fermeture de la requête et de la connexion
+  mysqli_stmt_close($stmt);
+  mysqli_close($conn);
+
+  // Redirection vers la page de destination
+  // header('Location: /inscriptiondone.php');
+
+  // echo "<p>Vous allez être redirigé vers la page de destination. si la redirection ne fontionne pas cliqez <a href:'/inscriptiondone.php'>ici</a></p>";
+
+  // // Envoi du contenu HTML généré à la page
+  // ob_end_flush();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -42,7 +88,7 @@
         <div class="modal-content">
         <span class="close">&times;</span>
         <p>Merci d'entrer vos information afin de vous inscrire.<br> Nous vous contacterons par la suite.</p>
-        <form action="inscriptiondone.php" method="post">
+        <form action="inscription.php" method="post">
             <label for="prenom">Prénom*:</label><br>
             <input type="text" id="fname" name="prenom" placeholder="Prénom"><br>
             <label for="nom">Nom*:</label><br>
@@ -91,14 +137,15 @@
         <!-- En tete du site -->
         <header>
             <div>
-                <h1 class="titr-bvn">BIENVENUE <br> AELA School</h1>
+                <h1 class="titr-bvn">BIENVENUE <br> <?php echo($prenom)?>  <?php echo($nom)?></h1>
             </div>
         </header>
         <!-- Contenu du site -->
         <main>
             <script src="tmps.js"></script>
-            <p>AELA School : Faites de votre passion pour l'informatique votre métier.</p>
-            <p><iframe width="560" height="315" src="https://www.youtube.com/embed/1W18Yg3x2Lo" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media"></iframe></p>
+            <p>Voici ton espace perso, ici tu aura accées a toute les ressources dons tu aura besoin. <br> Noublie pas de bien vérifier des information peronnel afin que nous puissions de contacter.</p>
+            <h1>Prénom et Nom : <?php echo($prenom)?> <?php echo($nom)?> <br> Email : <?php echo($email) ?> <br> Dernier diplome (vérification humaine avant la rentré): <?php echo($diplome)?> <br> Date de naissance : <?php echo($naissance) ?></h1>
+            <p> Une erreur de saisie ? cliques <a href="/modifinfo.php">ici</a> pour modifier vos information <p>
             <div class="container">
                 <h1 id="headline">Prochaine rentrée scolaire</h1>
                 <div id="countdown">

@@ -1,5 +1,6 @@
 
 <?php
+  // ob_start();
   // Récupération des données du formulaire
   $prenom = $_POST['prenom'];
   $nom = $_POST['nom'];
@@ -9,7 +10,7 @@
   $diplome = $_POST['diplome'];
 
   // Connexion à la base de données
-  $host = "192.168.1.17";
+  $host = "10.101.0.61";
   $username = "root";
   $password = "root";
   $dbname = "insciption";
@@ -35,6 +36,11 @@
   mysqli_stmt_close($stmt);
   mysqli_close($conn);
 
-  header("location: /index.html");
-  exit;
+  // Redirection vers la page de destination
+  // header('Location: /inscriptiondone.php');
+
+  // echo "<p>Vous allez être redirigé vers la page de destination. si la redirection ne fontionne pas cliqez <a href:'/inscriptiondone.php'>ici</a></p>";
+
+  // // Envoi du contenu HTML généré à la page
+  // ob_end_flush();
 ?>
