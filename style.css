@@ -413,6 +413,11 @@ footer > p{
   margin: 0px;
 }
 
+/* .connect{
+  font-family: var(--police);
+  margin-left: 50px;
+  padding-left: 50rem;
+} */
 
   @keyframes move-forever {
     0% {
