@@ -1,4 +1,5 @@
 <!-- Modifier la structure pour rediriger vers login pour evitér duplicata -->
+<!-- Probleme hashage mot de passe a revoir -->
 <?php
   // ob_start();
   // Récupération des données du formulaire
@@ -8,12 +9,15 @@
   $naissance = $_POST['naissance'];
   $email = $_POST['email'];
   $diplome = $_POST['diplome'];
-
+  $motdepasse = $_POST['motdepasse'];
+  $password_hash = hash('sha256', $motdepasse);
   // Connexion à la base de données
-  $host = "192.168.0.102";
+  $host = "192.168.1.17";
   $username = "root";
   $password = "root";
   $dbname = "insciption";
+
+ 
 
   $conn = mysqli_connect($host, $username, $password, $dbname);
 
@@ -23,11 +27,11 @@
   }
 
   // Préparation de la requête SQL d'insertion
-  $sql = "INSERT INTO inscription (prenom, nom, sexe, naissance, email, diplome) VALUES (?,?,?,?,?,?)";
+  $sql = "INSERT INTO inscription (prenom, nom, sexe, naissance, email, diplome, $password_hash) VALUES (?,?,?,?,?,?,?)";
   $stmt = mysqli_prepare($conn, $sql);
 
   // Liaison des variables à la requête préparée
-  mysqli_stmt_bind_param($stmt, "ssssss", $prenom, $nom, $sexe, $naissance, $email, $diplome);
+  mysqli_stmt_bind_param($stmt, "sssssss", $prenom, $nom, $sexe, $naissance, $email, $diplome, $password_hash);
 
   // Exécution de la requête
   mysqli_stmt_execute($stmt);
@@ -142,6 +146,7 @@
         </header>
         <!-- Contenu du site -->
         <main>
+            <h1>Votre inscription a bien été prise en compte !</h1>
             <p>Vous allez entre rediriger vers la page de connexion dans 5seconde ...</p>
         <script language="javascript" type="text/javascript">
      window.setTimeout('window.location="/connexion.php"; ',5000);
