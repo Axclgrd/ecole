@@ -31,7 +31,7 @@
                 <li><a href="info.html">Informations<span class="material-symbols-outlined">
                     info
                     </span></a></li>
-                <li><button class="login-button"><a href="connexion.html">Mon espace</button></li></a> <!-- Revoir lien entre page connexion et inscription-->
+                <li><button class="login-button" id="btnconnect">Mon espace</button></li> <!-- Revoir lien entre page connexion et inscription-->
                 <li><button id="myBtn" class="login-button">S'inscrire</button></li>
             </ul>
         <script src="script.js"></script>
@@ -87,6 +87,11 @@
     if (event.target == modal) {
         modal.style.display = "none";
     }}
+    // redirection page connection
+    const button = document.getElementById('btnconnect');
+    button.addEventListener('click', function() {
+    window.location.assign('connexion.php');
+    });
     </script>
 
         <!-- En tete du site -->

@@ -53,7 +53,7 @@ nav{
     font-family: var(--police);
 }
 
-.nav-links li a{
+.nav-links > li > a{
     margin: 0 0.7vw;
     text-decoration: none;
     transition: all ease-in-out 350ms;
@@ -61,22 +61,22 @@ nav{
     color: var(--couleur-secondaire);
 }
 
-.nav-links li a span{
+.nav-links > li > a > span{
     text-align:end;
 }
 
-.nav-links li a:hover{
+.nav-links>li>a:hover{
     color:#000;
     background-color: var(--couleur-secondaire);
     padding: 10px;
     border-radius: 50px;
 }
 
-.nav-links li{
+.nav-links > li{
     position:relative;
 }
 
-.nav-links li a:hover::before{
+.nav-links > li > a:hover::before{
     width: 80%;
 }
 
