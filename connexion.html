@@ -40,9 +40,9 @@
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
-        <div class="modal-content"> <!-- ajout d'un form mot de passe avec Hachage en back avant sql-->
+        <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Merci de bien vouloir indiquer vos informations afin de vous inscrire.<br> Nous vous contacterons par la suite.</p>
+        <p>Merci d'entrer vos information afin de vous inscrire.<br> Nous vous contacterons par la suite.</p>
         <form action="inscriptiondone.php" method="post">
             <label for="prenom">Prénom*:</label><br>
             <input type="text" id="fname" name="prenom" placeholder="Prénom"><br>
@@ -53,14 +53,12 @@
             <label for="homme">Homme</label><br>
             <input type="radio" id="femme" name="sexe" value="femme">
             <label for="femme">Femme</label><br>
-            <label for="diplome">Dernier diplôme*:</label><br>
+            <label for="diplome">Dernier diplome*:</label><br>
             <input type="text" id="diplome" name="diplome" placeholder="Dernier diplome"><br>
             <label for="naissance">Date de naissance*:</label>
             <input type="date" id="naissance" name="naissance" required><br>
             <label for="email">Email*:</label><br>
-            <input type="email" id="email" name="email" size="30" placeholder="email@nomdomaine.com"><br>
-            <label for="motdepasse">Mot de passe :</label><br>
-            <input type="password" id="motdepasse" name="motdepasse" size="30"><br>
+            <input type="email" id="email" name="email" size="30" placeholder="email@nomdomaine.com">
             <p>*Champs a caractère obligatoire</p>
             <button class="login-button" type="submit">Envoyer le formulaire</button>
         </form>
@@ -89,13 +87,11 @@
     if (event.target == modal) {
         modal.style.display = "none";
     }}
-
     // redirection page connection
     const button = document.getElementById('btnconnect');
     button.addEventListener('click', function() {
     window.location.assign('connexion.html');
     });
-
     </script>
 
         <!-- En tete du site -->
@@ -106,20 +102,19 @@
         </header>
         <!-- Contenu du site -->
         <main>
-            <script src="tmps.js"></script>
-            <p>AELA School : Faites de votre passion pour l'informatique votre métier.</p>
-            <p><iframe width="560" height="315" src="https://www.youtube.com/embed/1W18Yg3x2Lo" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media"></iframe></p>
-            <div class="container">
-                <h1 id="headline">Prochaine rentrée scolaire</h1>
-                <div id="countdown">
-                <ul>
-                    <li><span id="days"></span>days</li>
-                    <li><span id="hours"></span>Hours</li>
-                    <li><span id="minutes"></span>Minutes</li>
-                    <li><span id="seconds"></span>Seconds</li>
-                </ul>
-                </div>
+            <h1>Connexion :</h1>
+            <div class="connect">
+            <form action="connexion.php" method="get">
+            <label for="email">Email :</label><br>
+            <input type="email" id="email" name="email" size="30" placeholder="email@nomdomaine.com"><br>
+            <label for="password">Mot de passe :</label><br>
+            <input type="password" id="password" name="password" size="30"><br>
+            <button class="login-button" type="submit">Connexion</button>
             </div>
+        </form>
+
+            <p>AELA School : Faites de votre passion pour l'informatique votre métier.</p>
+            
         </main>
     </body>
     <footer>

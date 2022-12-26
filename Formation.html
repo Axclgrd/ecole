@@ -40,31 +40,34 @@
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
-        <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Merci d'entrer vos information afin de vous inscrire.<br> Nous vous contacterons par la suite.</p>
-        <form method="post" action="inscription.php">
-            <label for="prenom">Prénom*:</label><br>
-            <input type="text" id="fname" name="prenom" placeholder="Prénom"><br>
-            <label for="nom">Nom*:</label><br>
-            <input type="text" id="lname" name="nom" placeholder="Nom"><br>
-            <label for="sexe">Sexe*:</label><br>
-            <input type="radio" id="homme" name="sexe" value="Homme">
-            <label for="homme">Homme</label><br>
-            <input type="radio" id="femme" name="sexe" value="Femme">
-            <label for="femme">Femme</label><br>
-            <label for="diplome">Dernier diplome*:</label><br>
-            <input type="text" id="diplome" name="diplome" placeholder="Dernier diplome"><br>
-            <label for="naissance">Date de naissance*:</label>
-            <input type="date" id="naissance" name="naissance" required><br>
-            <label for="email">Email*:</label><br>
-            <input type="email" id="email" size="30" placeholder="email@nomdomaine.com"></form>
-            <p>*Champs a caractère obligatoire</p>
-            <button class="login-button" type="submit">Envoyer le formulaire</button>
-
-        </div>
+        <div class="modal-content"> <!-- ajout d'un form mot de passe avec Hachage en back avant sql-->
+            <span class="close">&times;</span>
+            <p>Merci de bien vouloir indiquer vos informations afin de vous inscrire.<br> Nous vous contacterons par la suite.</p>
+            <form action="inscriptiondone.php" method="post">
+                <label for="prenom">Prénom*:</label><br>
+                <input type="text" id="fname" name="prenom" placeholder="Prénom"><br>
+                <label for="nom">Nom*:</label><br>
+                <input type="text" id="lname" name="nom" placeholder="Nom"><br>
+                <label for="sexe">Sexe*:</label><br>
+                <input type="radio" id="homme" name="sexe" value="homme">
+                <label for="homme">Homme</label><br>
+                <input type="radio" id="femme" name="sexe" value="femme">
+                <label for="femme">Femme</label><br>
+                <label for="diplome">Dernier diplôme*:</label><br>
+                <input type="text" id="diplome" name="diplome" placeholder="Dernier diplome"><br>
+                <label for="naissance">Date de naissance*:</label>
+                <input type="date" id="naissance" name="naissance" required><br>
+                <label for="email">Email*:</label><br>
+                <input type="email" id="email" name="email" size="30" placeholder="email@nomdomaine.com"><br>
+                <label for="motdepasse">Mot de passe :</label><br>
+                <input type="password" id="motdepasse" name="motdepasse" size="30"><br>
+                <p>*Champs a caractère obligatoire</p>
+                <button class="login-button" type="submit">Envoyer le formulaire</button>
+            </form>
     
-    </div>
+            </div>
+        
+        </div>
     
     <script>
         // Get the modal
@@ -89,7 +92,7 @@
     // redirection page connection
     const button = document.getElementById('btnconnect');
     button.addEventListener('click', function() {
-    window.location.assign('connexion.php');
+    window.location.assign('connexion.html');
     });
     </script>
 
@@ -110,10 +113,10 @@
                         <img id="Elliot" src="https://www.formation-professionnelle.pro/wp-content/uploads/2021/04/formation-en-informatique.jpg">
                     </div>
                     <div class="content-card-Actor">
-                        <h3>Développeur <br><span> BTS ➡️ Master</span></h3>
+                        <h3>Ingénieur Développeur <br><span> BTS ➡️ Master</span></h3>
                     </div>
                     <div class="text-content" >
-                        <p>Lorem ipsum  sit amet consectetur adipisicing elit. Qui, corrupti unde. Praesentium porro et numquam a doloremque expedita, magnam accusamus.</p>
+                        <p><CENTER>Notre formation pour obtenir votre Master Ingénieur développement se fait sur 3 ans après l'obtention de votre BTS. Bien évidemment, il faut que vous ayez fait un BTS en rapport avec la formation (BTS SIO, BTS SN...) Dans cette formation vous aurez : Anglais LV1, mathématiques pour l'informatique, analyse économique managériale et juridique des services informatiques, des projets encadrées et l'enseignement spécifique lié à la formation et du travail en autonomie.</CENTER></p>
                     </div>
                     </div>
                 </div>
@@ -128,8 +131,7 @@
                         <h3>Ingénieur Réseau<br><span> BTS ➡️ Master</span></h3>
                     </div>
                     <div class="text-content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, corrupti unde. Praesentium porro et numquam a doloremque expedita, magnam accusamus.</p>
-                    </div>
+                        <p><CENTER>Notre formation pour obtenir votre Master Ingénieur Réseau se fait sur 3 ans après l'obtention de votre BTS. Bien évidemment, il faut que vous ayez fait un BTS en rapport avec la formation (BTS SIO, BTS SN...) Dans cette formation vous aurez : Anglais LV1, mathématiques pour l'informatique, analyse économique managériale et juridique des services informatiques, des projets encadrées et l'enseignement spécifique lié à la formation et du travail en autonomie.</CENTER></p>
                     </div>
                 </div>
             </section>

@@ -12,12 +12,10 @@
   $motdepasse = $_POST['motdepasse'];
   $password_hash = hash('sha256', $motdepasse);
   // Connexion à la base de données
-  $host = "10.101.0.124";
+  $host = "192.168.1.52";
   $username = "root";
   $password = "root";
   $dbname = "insciption";
-
- 
 
   $conn = mysqli_connect($host, $username, $password, $dbname);
 
@@ -27,7 +25,7 @@
   }
 
   // Préparation de la requête SQL d'insertion
-  $sql = "INSERT INTO inscription (prenom, nom, sexe, naissance, email, diplome, $password_hash) VALUES (?,?,?,?,?,?,?)";
+  $sql = "INSERT INTO inscription (prenom, nom, sexe, naissance, email, diplome, motdepasse) VALUES (?,?,?,?,?,?,?)";
   $stmt = mysqli_prepare($conn, $sql);
 
   // Liaison des variables à la requête préparée
