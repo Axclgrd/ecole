@@ -413,6 +413,10 @@ footer > p{
   margin: 0px;
 }
 
+a{
+  text-decoration: none;
+}
+
 /* .connect{
   font-family: var(--police);
   margin-left: 50px;

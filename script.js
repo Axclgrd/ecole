@@ -14,12 +14,12 @@ hamburger.addEventListener('click', ()=>{
     console.log("boucle");
 });
 
-
 (function () {
-  const second = 1000,
-    minute = second * 60,
-    hour = minute * 60,
-    day = hour * 24;
+  // Définition des constantes pour le nombre de millisecondes dans une journée, une heure, une minute et une seconde
+  const day = 1000 * 60 * 60 * 24;
+  const hour = 1000 * 60 * 60;
+  const minute = 1000 * 60;
+  const second = 1000;
 
   //I'm adding this section so I don't have to keep updating this pen every year :-)
   //remove this if you don't need it
@@ -43,18 +43,21 @@ hamburger.addEventListener('click', ()=>{
       const now = new Date().getTime(),
         distance = countDown - now;
 
-      document.getElementById("days").innerText = Math.floor(distance / (day)),
-        document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-        document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-        document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+      // Calcul du nombre de jours, heures, minutes et secondes restants
+      const days = Math.floor(distance / day);
+      const hours = Math.floor((distance % day) / hour);
+      const minutes = Math.floor((distance % hour) / minute);
+      const seconds = Math.floor((distance % minute) / second);
+
+      // Mise à jour de l'affichage du compte à rebours
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
 
       //do something later when date is reached
       if (distance < 0) {
-        document.getElementById("headline").innerText = "C'est la rentré ! Bienvenue au nouveau élèves";
+        document.getElementById("headline").innerText =  "C'est la rentrée ! Bienvenue au nouveau élève";
         document.getElementById("countdown").style.display = "none";
-        document.getElementById("content").style.display = "block";
-        clearInterval(x);
-      }
-      //seconds
-    }, 1)
-}());
+        document.getElementById("content").style.display = "block" 
+}})})
