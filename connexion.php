@@ -43,8 +43,4 @@
     // Si l'email et le mot de passe ne correspondent pas, on affiche un message d'erreur
     echo "Adresse email ou mot de passe incorrect.";
   }
-
-  // Fermeture de la requête et de la connexion
-  mysqli_stmt_close($stmt);
-  mysqli_close($conn);
 ?>
