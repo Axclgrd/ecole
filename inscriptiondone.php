@@ -10,7 +10,7 @@
   $motdepasse = $_POST['motdepasse'];
   $password_hash = hash('sha256', $motdepasse);
   // Connexion à la base de données
-  $host = "192.168.1.52";
+  $host = "192.168.56.1";
   $username = "root";
   $password = "root";
   $dbname = "insciption";

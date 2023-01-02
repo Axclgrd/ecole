@@ -5,7 +5,7 @@
   $password_hash = hash('sha256', $motdepasse);
 
   // Connexion à la base de données
-  $host = "192.168.1.52";
+  $host = "192.168.56.1";
   $username = "root";
   $password = "root";
   $dbname = "insciption";
@@ -32,7 +32,7 @@
   // Vérification de la correspondance entre l'email et le mot de passe
   if (mysqli_num_rows($result) == 1) {
     
-    $link = mysqli_connect('192.168.1.52', 'root', 'root', 'insciption');
+    $link = mysqli_connect('192.168.56.1', 'root', 'root', 'insciption');
     if (!$link) {
       die("Erreur de connexion : " . mysqli_connect_error());
     } 
