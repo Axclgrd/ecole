@@ -36,13 +36,6 @@
   mysqli_stmt_close($stmt);
   mysqli_close($conn);
 
-  // Redirection vers la page de destination
-  // header('Location: /inscriptiondone.php');
-
-  // echo "<p>Vous allez être redirigé vers la page de destination. si la redirection ne fontionne pas cliqez <a href:'/inscriptiondone.php'>ici</a></p>";
-
-  // // Envoi du contenu HTML généré à la page
-  // ob_end_flush();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -143,9 +136,9 @@
         <!-- Contenu du site -->
         <main>
             <h1>Votre inscription a bien été prise en compte !</h1>
-            <p>Vous allez entre rediriger vers la page de connexion dans 5seconde ...</p>
+            <p>Vous allez entre rediriger vers la page de connexion dans 5 secondes ...</p>
         <script language="javascript" type="text/javascript">
-     window.setTimeout('window.location="/connexion.php"; ',5000);
+     window.setTimeout('window.location="/connexion.html"; ',5000);
     </script>
             <!-- <script src="tmps.js"></script>
             <p>Voici ton espace perso, ici tu aura accées a toute les ressources dons tu aura besoin. <br> Noublie pas de bien vérifier des information peronnel afin que nous puissions de contacter.</p>
