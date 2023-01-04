@@ -7,4 +7,3 @@ Proposer un site pour la partie Front en exploitant le Bootstrap
 # Ressource
 https://css.glass
 
-      # ip magique 192.168.1.17
