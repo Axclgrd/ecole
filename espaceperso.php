@@ -110,10 +110,10 @@ session_start();
         <!-- Contenu du site -->
         <main>
             <script src="tmps.js"></script>
-            <p>Voici votre espace personnel, plus d'informations seron à votre disposition au moment de la rentrée</p>
-            <p>Vous etes un(e) <?php echo($_SESSION['sexe'])?></p>
+            <p>Voici votre espace personnel, plus d'informations seront à votre disposition au moment de la rentrée</p>
+            <p>Vous êtes un(e) <?php echo($_SESSION['sexe'])?></p>
             <p>Votre email : <?php echo($_SESSION['email'])?></p>
-            <p>Votre dernier diplome : <?php echo($_SESSION['diplome'])?></p>
+            <p>Votre dernier diplôme : <?php echo($_SESSION['diplome'])?></p>
             <p>Votre date de naissance : <?php echo($_SESSION['naissance'])?></p>
             <h1>En cas de problème, contactez-nous pour modifier vos informations personnelles</h1>
             <div class="container">
