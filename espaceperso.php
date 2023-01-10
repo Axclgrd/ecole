@@ -128,8 +128,10 @@ session_start();
                 </div>
             </div>
         </main>
+        <section id="copy-right">
+                <div class="copy-right-sec"><i class="fa-solid fa-copyright"></i>  
+                    AELA School<br>&copy; Tout droits réservés 2023     
+                </div>
+            </section>
     </body>
-    <footer>
-    <p>AELA School<br>Tout droits réservés©</p>
-    </footer>
 </html>
