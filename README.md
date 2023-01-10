@@ -7,4 +7,3 @@ Proposer un site pour la partie Front en exploitant le Bootstrap
 # Ressource
 https://css.glass
 
-g

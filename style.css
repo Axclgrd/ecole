@@ -1,5 +1,5 @@
 :root{
---couleur-fond: #626262;
+--couleur-fond: #929292;
 --couleur-principal: #3F837A;
 --couleur-secondaire: #773355;
 --couleur-texte: #000;
@@ -399,6 +399,11 @@ section .Card-Actor .content-Actor .text-content p{
   font-size: 1.0em;
   padding: 10px;
   color: #000;
+  text-align: justify;
+  text-align-last: center;
+  margin-bottom: 0;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 section .Card-Actor .content-Actor .text-content a{
@@ -498,6 +503,25 @@ a{
   text-decoration: none;
 }
 
+.histoire > h1{
+  padding-top: 0;
+  text-align: center;
+  color: var(--couleur-secondaire);
+  font-family: var(--police);
+  text-decoration: underline;
+}
+
+.histoire > p{
+  font-family: var(--police);
+  color: #000;
+  text-align: justify;
+  text-align-last: center;
+  font-size: 15pt;
+  margin-left: 4.5rem;
+  margin-right: 4.5rem;
+}
+
+
 /* .connect{
   font-family: var(--police);
   margin-left: 50px;
@@ -591,6 +615,12 @@ a{
         opacity: 1;
     }
 
+    .histoire > p{
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    
+
     /* Navigation Bar Icon on Click*/
 
         .toggle .bars1{
@@ -661,4 +691,3 @@ a{
           }
 
 }
-

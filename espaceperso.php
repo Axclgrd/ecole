@@ -26,7 +26,7 @@ session_start();
                 <div class="bars3"></div>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Acceuil <span class="material-symbols-outlined">
+            <li><a href="index.html">Accueil <span class="material-symbols-outlined">
                     home
                     </span></a></li>
                 <li><a href="formation.html">Formations<span class="material-symbols-outlined">
@@ -34,6 +34,9 @@ session_start();
                     </span></a></li>
                 <li><a href="info.html">Informations<span class="material-symbols-outlined">
                     info
+                    </span></a></li>
+                    <li><a href="info.html">Notre histoire<span class="material-symbols-outlined">
+                        auto_stories
                     </span></a></li>
                 <li><a class="login-button" <?php session_destroy()?> href="/connexion.html">Déconexion</a></li>
             </ul>
