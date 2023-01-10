@@ -5,6 +5,7 @@
 --couleur-texte: #000;
 --police: 'Poppins', sans-serif;
 --police-logo:'Space Mono', monospace;
+--couleur-blanc: #fff;
 }
 
 body{
@@ -479,7 +480,7 @@ footer > p{
 .copy-right-sec{
   padding: 1rem;
   background: var(--couleur-texte);
-  color: var(--couleur-fond);
+  color: var(--couleur-blanc);
   text-align: left;
   width: 100%;
   font-weight: 500;
