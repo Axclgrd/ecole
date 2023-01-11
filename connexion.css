@@ -5,6 +5,7 @@
     --couleur-texte: #000;
     --police: 'Poppins', sans-serif;
     --police-logo:'Space Mono', monospace;
+    --couleur-blanc: #fff;
     }
 
 .form {
@@ -87,7 +88,7 @@
   }
   
   .placeholder {
-    color: var(--couleur-fond);
+    color: var(--couleur-blanc);
     font-family: var(--police);
     left: 14px;
     line-height: 14px;

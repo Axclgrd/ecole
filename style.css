@@ -97,6 +97,8 @@ nav{
 .fade-in {
   opacity: 0;
   animation: fade-in 0.5s ease-in forwards;
+  text-decoration: underline;
+  font-weight: 900;
 }
 
 @keyframes fade-in {
@@ -223,7 +225,7 @@ header{
   width: 100%;
   overflow: hidden;
   background-size: cover;
-  background-image: url("https://www.apformation.com/uploads/formations/4/87c8802ad6ddaa6598de7104ba7c7062_small.jpg");
+  background-image: url("https://www.studyrama.com/sites/default/files/article/2022-06/arton107930.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -463,7 +465,7 @@ footer > p{
 
 .section2 > p{
   margin-left: 4rem;
-  color: var(--couleur-principal);
+  color: var(--couleur-texte);
   font-family: var(--police);
   position: relative;
   margin-right: 4rem;
